@@ -157,8 +157,9 @@ export default function ( program ) {
 		let worker = new Worker( URL.createObjectURL( new Blob(
 			[
 				init,
-				'function start ( role ) {\n',
-				'console.log( "start" )\n',
+				'\n',
+				'\t\tfunction start ( role ) {\n',
+				'\t\tconsole.log( "start" )\n',
 				pre, program,
 				'\n', end,  '\n}'
 			], { type: 'text/javascript' } )
